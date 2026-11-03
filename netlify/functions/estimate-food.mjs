@@ -5,7 +5,7 @@ export default async (request) => {
     return Response.json({ error: 'method_not_allowed' }, { status: 405 });
   }
 
-  const apiKey = Netlify.env.get('GEMINI_API_KEY');
+  const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     console.error('Missing GEMINI_API_KEY environment variable');
     return Response.json({ error: 'api_key_missing' }, { status: 500 });
