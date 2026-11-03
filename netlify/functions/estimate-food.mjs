@@ -9,7 +9,7 @@ export default async (request) => {
     );
   }
 
-  const apiKey = process.env.GROQ_API_KEY;
+const apiKey = process.env.GROQ_API_KEY;
 
   if (!apiKey) {
     console.error('Missing GROQ_API_KEY environment variable');
